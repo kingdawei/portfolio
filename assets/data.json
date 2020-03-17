@@ -1,0 +1,83 @@
+{
+	"about":
+        {
+		"name":"Donghyuk Kim",
+        "title":"Student at Boston College",
+        "photo":"assets/profile.png",
+        "desc":"Donghyuk (David) Kim is a senior at Boston College pursuing B.A in Computer Science.",
+        "email": "kimbyi@bc.edu",
+        "address": "321 Hammond Pond Parkway, Chestnut Hill, MA 02467",
+        "linkedin":"https://www.linkedin.com/in/donghyukkim/",
+        "github":"https://github.com/kingdawei"
+        },
+
+	"news":[
+		{
+			"title": "Started Spring 2020 Semester",
+			"date": "Jan 13, 2020"
+        },
+        {
+			"title": "Started working as Teaching Assistant for Computer Systems",
+			"date": "Jan 13, 2020"
+        }],
+        
+	"projects":[
+		{
+			"id":"NLP",
+            "title": "Dectection of Murderers in TV Show Crime Scene Investigation",
+            "authors": "Donghyuk Kim, Jessica Bolduc, Ashley Oh, Dipesh Patel",
+            "source": "Natural Language Processing CSCI3349 Project, Fall 2019",
+            "teaser": "assets/NLP/nlp_poster.png",
+            "tags":["machine-learning", "nlp"],
+            "materials": [
+                { 
+                "label": "Download-Poster",
+                "path": "assets/NLP/nlp_proj.pptx"
+                },
+                { 
+                "label": "Github",
+                "path": "https://github.com/ash-oh/csi-cant-stand-it"
+                }],
+            "desc": "Can we quantitatively differentiate murderers and non-murderers in TV Show, Crime Scene Investigation, by analyzing their scripts? We utilized several Natural Language Processing techniques such as sentiment analysis, affective, bag of word models to classify characters into murderers and non-murderers using machine learning models."
+        },
+        {
+			"id":"ASL",
+            "title": "ASL Classification",
+            "authors": "Donghyuk Kim, Roger Wang, Jay Agrawal, Azim Keshwani, Matthew Kim",
+
+            "source": "Machine Learning CSCI3345 Project, Fall 20192",
+            "teaser": "assets/ASL/ASL_image.png",
+            "tags":["machine-learning", "vision"],
+            "materials": [
+                { 
+                "label": "Paper",
+                "path": "assets/ASL/ASL_report.pdf"
+                },
+                { 
+                "label": "Code",
+                "path": "https://colab.research.google.com/drive/1eogkyXs47nXEySZM2X7rOsYbbT8wfIZc"
+                }],
+            "desc": "We utilized recurrent neural networks to build a model that can classify images of alphabets in American Sign Language."
+        },
+        {
+			"id":"reduction",
+            "title": "Proof of Hardness: Subset-Sum Problem",
+            "authors": "Donghyuk Kim",
+            "source": "Computability and Complexity CSCI3390 Project, Fall 2018",
+            "teaser": "assets/reduction/reduction_subset.png",
+            "tags":["theory", "algorithms"],
+            "materials": [
+                { 
+                "label": "Paper",
+                "path": "assets/reduction/kim_complexity.pdf"
+                },
+                { 
+                "label": "Github",
+                "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
+                }],
+            "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time."
+        }
+	]
+}
+
+

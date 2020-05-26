@@ -1,59 +1,61 @@
 let data;
 
-let photos = ['profile.png'] //
+let photos = ["profile.png"]; //
 
-
-fetch('assets/data.json')
-.then(resp=>resp.json())
-.then(d=>{
-    console.log('loaded:',d);
+fetch("assets/data.json")
+  .then((resp) => resp.json())
+  .then((d) => {
+    console.log("loaded:", d);
     data = d;
     // determine what page to render
     let params = new URLSearchParams(window.location.search);
-    if (params.get('project')==null){
-        renderMainPage(data);
-    }else{
-        let project = data.projects.find(d=>d.id===params.get('project'));
-        renderProjectPage(project);
+    if (params.get("project") == null) {
+      renderMainPage(data);
+    } else {
+      let project = data.projects.find((d) => d.id === params.get("project"));
+      renderProjectPage(project);
     }
-});
+  });
 
-function renderNavbar(page, items){
-    return `
+function renderNavbar(page, items) {
+  return `
     <nav>
         <ul>
-           ${page==='project'? (
-                `<li>
+           ${
+             page === "project"
+               ? `<li>
                     <a href=".">Go Back</a>
                 </li>`
-           ):(
-                items.map(d=>
-                `<li>
+               : items
+                   .map(
+                     (d) =>
+                       `<li>
                     <a href="#${d}">${d.toUpperCase()}</a>
                 </li>
-                `).join('')
-            )}
+                `
+                   )
+                   .join("")
+           }
         </ul>
-    </nav>`
+    </nav>`;
 }
 
-function renderMainPage(data){
-
-    document.querySelector('.container').innerHTML = `
-        ${renderNavbar('main', Object.keys(data))}
+function renderMainPage(data) {
+  document.querySelector(".container").innerHTML = `
+        ${renderNavbar("main", Object.keys(data))}
         ${renderAbout(data.about)}
         ${renderNews(data.news)}
         ${renderProjects(data.projects)}
-    `
-    addInteractions();
+    `;
+  addInteractions();
 }
-function renderAbout(about){
-    return `
+function renderAbout(about) {
+  return `
     <section id="about">
-        <h1 class="title animated infinite jello slow delay-1s">${about.name}</h1>
+        <h1 class="title">${about.name}</h1>
         <div class="row">
             <div class="col-6">
-                <img class="profile-img" src="assets/${_.sample(photos)}"/>
+             
                 <p>
                     <strong>${about.title}</strong><br>
                     ${about.email} <br>
@@ -69,24 +71,28 @@ function renderAbout(about){
             </div>
             
         </div >    
-    </section>`
+    </section>`;
 }
 
-function renderMaterialIcon(type){
-    switch (type){
-        case 'Paper':
-            return '<i class="far fa-file-alt"></i>';
-        case 'Github':
-            return '<i class="fab fa-github"></i>';
-        case 'Download-Poster':
-            return '<i class="fas fa-file-download"></i>';
-        case 'Code': 
-            return ''
-    }
+function renderMaterialIcon(type) {
+  switch (type) {
+    case "Paper":
+      return '<i class="far fa-file-alt"></i>';
+    case "Report":
+      return '<i class="far fa-file-alt"></i>';
+    case "Github":
+      return '<i class="fab fa-github"></i>';
+    case "Download-Poster":
+      return '<i class="fas fa-file-download"></i>';
+    case "Code":
+      return '<i class="far fa-keyboard"></i>';
+    case "Website":
+      return '<i class="fas fa-chalkboard"></i>';
+  }
 }
 
-function renderNews(news){
-    return `
+function renderNews(news) {
+  return `
     <section id="news">
         <h1 class="title">News</h1>
         <div class="search">
@@ -96,10 +102,13 @@ function renderNews(news){
             ${renderNewsItems(news)}
         </div>
     </section>
-    `
+    `;
 }
-function renderNewsItems(news){
-    return news.slice(0,6).map(d=>`
+function renderNewsItems(news) {
+  return news
+    .slice(0, 6)
+    .map(
+      (d) => `
         <div class="row">
             <div class="col-8">
                 ${d.title}
@@ -108,18 +117,36 @@ function renderNewsItems(news){
                 ${d.date}
             </div>
         </div>
-    `).join('');
+    `
+    )
+    .join("");
 }
 
-function renderProjects(projects){
-    return `
+function renderProjects(projects) {
+  return `
     <section id="projects">
         <h1 class="title">Projects</h1>
         <div class="filter">
+            <input type="radio" name="filter" value="all">
+                All
+            </label>
             <label>
                 <input type="radio" name="filter" value="theory">
                 Theory
             </label>
+            <label>
+                <input type="radio" name="filter" value="design">
+                Design
+            </label>
+            <label>
+                <input type="radio" name="filter" value="database">
+                Database
+            </label>
+            <label>
+            <input type="radio" name="filter" value="web-app">
+                Web-App
+            </label>
+            
             <label>
                 <input type="radio" name="filter" value="machine-learning">
                 Machine Learning
@@ -127,10 +154,6 @@ function renderProjects(projects){
             <label>
                 <input type="radio" name="filter" value="algorithms">
                 Algorithms
-            </label>
-            <label>
-                <input type="radio" name="filter" value="vision">
-                Computer Vision
             </label>
             <label>
                 <input type="radio" name="filter" value="nlp">
@@ -143,45 +166,54 @@ function renderProjects(projects){
     </section>`;
 }
 
-function addInteractions(){
-    let newsSearch = document.querySelector('.search input[name="news"');
+function addInteractions() {
+  let newsSearch = document.querySelector('.search input[name="news"');
 
-    newsSearch.addEventListener('input', function(event){
-        // renderNews(allNews.filter(''))
-        console.log('value', this.value);
-        if (this.value!=''){
-            let filtered = data.news.filter(d=>{
-                let text = (d.title + ' ' + d.date);
-                return text.toLowerCase().includes(this.value.toLowerCase());
-            })
-            
-            document.querySelector('.news-list').innerHTML = renderNewsItems(filtered);
-        }else{
-            document.querySelector('.news-list').innerHTML = renderNewsItems(data.news);
-        }
-    });
-    
-    let conds = document.querySelectorAll('.filter input[name="filter"]');
-    console.log(typeof conds);
-    conds.forEach(cond=>cond.addEventListener('change', function(event){
-        
-        let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
-        if (checked==='all'){
-            document.querySelector('.project-list').innerHTML = renderProjectItems(data.projects);
-        }else{
-            let filtered = data.projects.filter(d=>{
-                return d.tags.some(tag=>checked === tag.toLowerCase());
-            });
-            // console.log('filtered', filtered);
-        
-            document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
-        }
-    
-    }));
-    
+  newsSearch.addEventListener("input", function (event) {
+    // renderNews(allNews.filter(''))
+    console.log("value", this.value);
+    if (this.value != "") {
+      let filtered = data.news.filter((d) => {
+        let text = d.title + " " + d.date;
+        return text.toLowerCase().includes(this.value.toLowerCase());
+      });
+
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        filtered
+      );
+    } else {
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        data.news
+      );
+    }
+  });
+
+  let conds = document.querySelectorAll('.filter input[name="filter"]');
+  console.log(typeof conds);
+  conds.forEach((cond) =>
+    cond.addEventListener("change", function (event) {
+      let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
+      if (checked === "all") {
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          data.projects
+        );
+      } else {
+        let filtered = data.projects.filter((d) => {
+          return d.tags.some((tag) => checked === tag.toLowerCase());
+        });
+        // console.log('filtered', filtered);
+
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          filtered
+        );
+      }
+    })
+  );
 }
-function renderProjectItems(projects){
-    return projects.map(d=>`
+function renderProjectItems(projects) {
+  return projects
+    .map(
+      (d) => `
         <div class="row">
             <div class="col-6">
                 <div class="project-title">
@@ -194,20 +226,30 @@ function renderProjectItems(projects){
                     <em>${d.source}</em>
                 </div>
                 <div class="project-tags">
-                    ${d.tags.map(tag=>`
+                    ${d.tags
+                      .map(
+                        (tag) => `
                         <span class="tag ${tag.toLowerCase()}">
                             ${tag}
                         </span>
-                    `).join('')}
+                    `
+                      )
+                      .join("")}
                 </div>
                 <div class="project-materials">
-                    ${d.materials.map(m=>`
+                    ${d.materials
+                      .map(
+                        (m) => `
                         <span>
-                            <a href="${m.path}" target="_blank">${renderMaterialIcon(m.label)} 
+                            <a href="${
+                              m.path
+                            }" target="_blank">${renderMaterialIcon(m.label)} 
                             ${m.label}
                             </a>
                         </span>
-                    `).join('')}
+                    `
+                      )
+                      .join("")}
                     
                 </div>
             </div> 
@@ -215,94 +257,109 @@ function renderProjectItems(projects){
                 <img src="${d.teaser}" width="100%">
             </div>
         </div>
-    `).join('');
-}
-
-function addInteractions(){
-    let newsSearch = document.querySelector('.search input[name="news"');
-
-    newsSearch.addEventListener('input', function(event){
-        // renderNews(allNews.filter(''))
-        console.log('value', this.value);
-        if (this.value!=''){
-            let filtered = data.news.filter(d=>{
-                let text = (d.title + ' ' + d.date);
-                return text.toLowerCase().includes(this.value.toLowerCase());
-            })
-            
-            document.querySelector('.news-list').innerHTML = renderNewsItems(filtered);
-        }else{
-            document.querySelector('.news-list').innerHTML = renderNewsItems(data.news);
-        }
-    });
-    
-    let conds = document.querySelectorAll('.filter input[name="filter"]');
-    console.log(typeof conds);
-    conds.forEach(cond=>cond.addEventListener('change', function(event){
-        
-        let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
-        if (checked==='all'){
-            document.querySelector('.project-list').innerHTML = renderProjectItems(data.projects);
-        }else{
-            let filtered = data.projects.filter(d=>{
-                return d.tags.some(tag=>checked === tag.toLowerCase());
-            });
-            // console.log('filtered', filtered);
-        
-            document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
-        }
-    
-    }));
-    
-}
-
-
-function renderProjectPage(project){
-    document.querySelector('.container').innerHTML = `
-        ${renderNavbar('project')}
-        ${renderProjectDetail(project)}
     `
+    )
+    .join("");
 }
 
-function addInteractions(){
-    let newsSearch = document.querySelector('.search input[name="news"');
+function addInteractions() {
+  let newsSearch = document.querySelector('.search input[name="news"');
 
-    newsSearch.addEventListener('input', function(event){
-        // renderNews(allNews.filter(''))
-        console.log('value', this.value);
-        if (this.value!=''){
-            let filtered = data.news.filter(d=>{
-                let text = (d.title + ' ' + d.date);
-                return text.toLowerCase().includes(this.value.toLowerCase());
-            })
-            
-            document.querySelector('.news-list').innerHTML = renderNewsItems(filtered);
-        }else{
-            document.querySelector('.news-list').innerHTML = renderNewsItems(data.news);
-        }
-    });
-    
-    let conds = document.querySelectorAll('.filter input[name="filter"]');
-    console.log(typeof conds);
-    conds.forEach(cond=>cond.addEventListener('change', function(event){
-        
-        let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
-        if (checked==='all'){
-            document.querySelector('.project-list').innerHTML = renderProjectItems(data.projects);
-        }else{
-            let filtered = data.projects.filter(d=>{
-                return d.tags.some(tag=>checked === tag.toLowerCase());
-            });
-            // console.log('filtered', filtered);
-        
-            document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
-        }
-    
-    }));
-    
+  newsSearch.addEventListener("input", function (event) {
+    // renderNews(allNews.filter(''))
+    console.log("value", this.value);
+    if (this.value != "") {
+      let filtered = data.news.filter((d) => {
+        let text = d.title + " " + d.date;
+        return text.toLowerCase().includes(this.value.toLowerCase());
+      });
+
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        filtered
+      );
+    } else {
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        data.news
+      );
+    }
+  });
+
+  let conds = document.querySelectorAll('.filter input[name="filter"]');
+  console.log(typeof conds);
+  conds.forEach((cond) =>
+    cond.addEventListener("change", function (event) {
+      let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
+      if (checked === "all") {
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          data.projects
+        );
+      } else {
+        let filtered = data.projects.filter((d) => {
+          return d.tags.some((tag) => checked === tag.toLowerCase());
+        });
+        // console.log('filtered', filtered);
+
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          filtered
+        );
+      }
+    })
+  );
 }
-function renderProjectDetail(d){
-    return `
+
+function renderProjectPage(project) {
+  document.querySelector(".container").innerHTML = `
+        ${renderNavbar("project")}
+        ${renderProjectDetail(project)}
+    `;
+}
+
+function addInteractions() {
+  let newsSearch = document.querySelector('.search input[name="news"');
+
+  newsSearch.addEventListener("input", function (event) {
+    // renderNews(allNews.filter(''))
+    console.log("value", this.value);
+    if (this.value != "") {
+      let filtered = data.news.filter((d) => {
+        let text = d.title + " " + d.date;
+        return text.toLowerCase().includes(this.value.toLowerCase());
+      });
+
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        filtered
+      );
+    } else {
+      document.querySelector(".news-list").innerHTML = renderNewsItems(
+        data.news
+      );
+    }
+  });
+
+  let conds = document.querySelectorAll('.filter input[name="filter"]');
+  console.log(typeof conds);
+  conds.forEach((cond) =>
+    cond.addEventListener("change", function (event) {
+      let checked = event.target.value; //Array.from(conds).filter(d=>d.checked).map(d=>d.value);
+      if (checked === "all") {
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          data.projects
+        );
+      } else {
+        let filtered = data.projects.filter((d) => {
+          return d.tags.some((tag) => checked === tag.toLowerCase());
+        });
+        // console.log('filtered', filtered);
+
+        document.querySelector(".project-list").innerHTML = renderProjectItems(
+          filtered
+        );
+      }
+    })
+  );
+}
+function renderProjectDetail(d) {
+  return `
     <section>
         <h1 class="title">${d.title}</h1>
         <img class="project-teaser" src="${d.teaser}" width="100%">
@@ -313,11 +370,15 @@ function renderProjectDetail(d){
             <em>${d.source}</em>
         </div>
         <div class="project-tags">
-            ${d.tags.map(tag=>`
+            ${d.tags
+              .map(
+                (tag) => `
                 <span class="tag ${tag.toLowerCase()}">
                     ${tag}
                 </span>
-            `).join('')}
+            `
+              )
+              .join("")}
         </div>
         <div class="project-desc">
             <p>
@@ -325,14 +386,20 @@ function renderProjectDetail(d){
             </p>
         </div>
         <div class="project-materials">
-            ${d.materials.map(m=>`
+            ${d.materials
+              .map(
+                (m) => `
                 <span>
-                    <a href="${m.path}" target="_blank">${renderMaterialIcon(m.label)} 
+                    <a href="${m.path}" target="_blank">${renderMaterialIcon(
+                  m.label
+                )} 
                     ${m.label}
                     </a>
                 </span>
-            `).join('')}
+            `
+              )
+              .join("")}
         </div>
     </section>
-    `
+    `;
 }

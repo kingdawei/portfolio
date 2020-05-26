@@ -1,178 +1,207 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-.container{
-    max-width:1024px;
-    width:100%;
-    margin: 0 auto;
-    padding:50px 20px 20px 20px; 
-    box-sizing: border-box;
-}
-
-a{
-    text-decoration: none;
-    color:#039BE5;
-    /* color: black; */
-    /* text-decoration-color: #B3E5FC; */
-    /* text-decoration-color: blue; */
-    /* text-decoration: underline; */
-    /* text-decoration-style: dotted; */
-    /* background-color: #B3E5FC; */
-    transition: background-color 0.2s;
-}
-a:hover{
-    text-decoration: none;
-    background-color: #B3E5FC;
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 20px 20px 20px;
+  box-sizing: border-box;
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    /* height:2rem;  */
-    background-color: white;    
+a {
+  text-decoration: none;
+  color: #039be5;
+  /* color: black; */
+  /* text-decoration-color: #B3E5FC; */
+  /* text-decoration-color: blue; */
+  /* text-decoration: underline; */
+  /* text-decoration-style: dotted; */
+  /* background-color: #B3E5FC; */
+  transition: background-color 0.2s;
+}
+a:hover {
+  text-decoration: none;
+  background-color: #b3e5fc;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height:2rem;  */
+  background-color: white;
 }
 li a {
-    margin-right:1.5rem;
-    text-decoration: none;
+  margin-right: 1.5rem;
+  text-decoration: none;
 }
 
-footer{
-    width: 100%;
-    text-align: center;
-    margin: 10px 0px 10px 0px;
+footer {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
 }
 
-section .title{
-    font-family: 'Josefin Sans';
-    font-size: 2rem;
-    text-align: center;
+section .title {
+  font-family: "Josefin Sans";
+  font-size: 2rem;
+  text-align: center;
 }
-section{
-    margin: 1rem 0 1rem 0;
+section {
+  margin: 1rem 0 1rem 0;
 }
-.row{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-#about .col-6:nth-child(1){
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+#about .col-6:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.profile-img{
-    border-radius: 5px;
-    width: 270px;
-    height:270px;
-    object-fit:cover;
+.profile-img {
+  border-radius: 5px;
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
 }
 
 #news .row {
-    padding:5px;
+  padding: 5px;
 }
 
-#projects .row{
-    margin-bottom: 1.5rem;
+#projects .row {
+  margin-bottom: 1.5rem;
 }
 
-.tag{
-    display: inline-block;
-    border-radius: 2px;
-    margin: 5px 5px 5px 0px;
-    padding: 2px 4px 2px 4px;
-    background: #eeeeee;
+.tag {
+  display: inline-block;
+  border-radius: 2px;
+  margin: 5px 5px 5px 0px;
+  padding: 2px 4px 2px 4px;
+  background: #eeeeee;
 }
-.tag:last-child{
-    margin: 5px 0px 5px 0px;
+.tag:last-child {
+  margin: 5px 0px 5px 0px;
 }
-.nlp{
-    background-color: #FFCDD2;
-    color: #B71C1C;
+.nlp {
+  background-color: #ffcdd2;
+  color: #b71c1c;
 }
-.machine-learning{
-    background-color: #C8E6C9;
-    color: #1B5E20;
+.machine-learning {
+  background-color: #c8e6c9;
+  color: #1b5e20;
 }
-.theory{
-    background-color: #D1C4E9;
-    color: #311B92;
+.theory {
+  background-color: #d1c4e9;
+  color: #311b92;
 }
-.vision{
-    background-color: #B2EBF2;
-    color: #006064;
+.design {
+  background-color: black;
+  color: yellow;
 }
-.algorithms{
-    background-color: #FFE0B2;
-    color: #E65100;
+.database {
+  background-color: royalblue;
+  color: gold;
+}
+.web-app {
+  background-color: #b2ebf2;
+  color: #006064;
+}
+.algorithms {
+  background-color: #ffe0b2;
+  color: #e65100;
 }
 
-.project-materials{
-    margin: 0.5rem 0 0.5rem 0;
+.project-materials {
+  margin: 0.5rem 0 0.5rem 0;
 }
-.project-materials span{
-    margin: 0 0.5rem 0 0 
+.project-materials span {
+  margin: 0 0.5rem 0 0;
 }
 
-.project-teaser{
-    width: 100%;
+.project-teaser {
+  width: 100%;
 }
 
 [class*="col-"] {
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 #news [class*="col-"] {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 @media only screen and (min-width: 768px) {
-    .col-1 {flex-basis: 8.33%;}
-    .col-2 {flex-basis: 16.66%;}
-    .col-3 {flex-basis: 25%;}
-    .col-4 {flex-basis: 33.33%;}
-    .col-5 {flex-basis: 41.66%;}
-    .col-6 {flex-basis: 50%;}
-    .col-7 {flex-basis: 58.33%;}
-    .col-8 {flex-basis: 66.66%;}
-    .col-9 {flex-basis: 75%;}
-    .col-10 {flex-basis: 83.33%;}
-    .col-11 {flex-basis: 91.66%;}
-    .col-12 {flex-basis: 100%;}
-    
+  .col-1 {
+    flex-basis: 8.33%;
+  }
+  .col-2 {
+    flex-basis: 16.66%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+  .col-4 {
+    flex-basis: 33.33%;
+  }
+  .col-5 {
+    flex-basis: 41.66%;
+  }
+  .col-6 {
+    flex-basis: 50%;
+  }
+  .col-7 {
+    flex-basis: 58.33%;
+  }
+  .col-8 {
+    flex-basis: 66.66%;
+  }
+  .col-9 {
+    flex-basis: 75%;
+  }
+  .col-10 {
+    flex-basis: 83.33%;
+  }
+  .col-11 {
+    flex-basis: 91.66%;
+  }
+  .col-12 {
+    flex-basis: 100%;
+  }
 
-    #news .col-4 {
-        text-align: right;
-    }
+  #news .col-4 {
+    text-align: right;
+  }
 
-    .search {
-        position: relative;
-    }
-    .search input {
-        /* box-sizing: border-box; */
-        /* display: block; */
-        width:100%;
-        margin:0.5rem 0 0.5rem 0;
-        font-size: 0.9rem;
-        padding: 0.5rem;
-        border-radius: 1rem;
-        border: 1px solid #eeeeee;
-        /* outline: none; */
-    }
-    
-    .filter{
-        margin: 1rem 0 1rem 0;
-    }
-    .filter label{
-        padding: .2rem 0.5rem;
-        margin: .2rem;
-    }
+  .search {
+    position: relative;
+  }
+  .search input {
+    /* box-sizing: border-box; */
+    /* display: block; */
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: 1px solid #eeeeee;
+    /* outline: none; */
+  }
+
+  .filter {
+    margin: 1rem 0 1rem 0;
+  }
+  .filter label {
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem;
+  }
 }

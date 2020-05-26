@@ -1,83 +1,144 @@
 {
-	"about":
-        {
-		"name":"Donghyuk Kim",
-        "title":"Student at Boston College",
-        "photo":"assets/profile.png",
-        "desc":"Donghyuk (David) Kim is a senior at Boston College pursuing B.A in Computer Science.",
-        "email": "kimbyi@bc.edu",
-        "address": "321 Hammond Pond Parkway, Chestnut Hill, MA 02467",
-        "linkedin":"https://www.linkedin.com/in/donghyukkim/",
-        "github":"https://github.com/kingdawei"
-        },
+  "about": {
+    "name": "Donghyuk Kim (David)",
+    "title": "Donghyuk Kim",
+    "photo": "assets/profile.png",
+    "desc": "Hi, I am a recent graduate at Boston College with B.A in Computer Science.",
+    "email": "davidk0716@gmail.com",
+    "address": "321 Hammond Pond Parkway, Chestnut Hill, MA 02467",
+    "linkedin": "https://www.linkedin.com/in/donghyukkim/",
+    "github": "https://github.com/kingdawei"
+  },
 
-	"news":[
-		{
-			"title": "Started Spring 2020 Semester",
-			"date": "Jan 13, 2020"
-        },
-        {
-			"title": "Started working as Teaching Assistant for Computer Systems",
-			"date": "Jan 13, 2020"
-        }],
-        
-	"projects":[
-		{
-			"id":"NLP",
-            "title": "Dectection of Murderers in TV Show Crime Scene Investigation",
-            "authors": "Donghyuk Kim, Jessica Bolduc, Ashley Oh, Dipesh Patel",
-            "source": "Natural Language Processing CSCI3349 Project, Fall 2019",
-            "teaser": "assets/NLP/nlp_poster.png",
-            "tags":["machine-learning", "nlp"],
-            "materials": [
-                { 
-                "label": "Download-Poster",
-                "path": "assets/NLP/nlp_proj.pptx"
-                },
-                { 
-                "label": "Github",
-                "path": "https://github.com/ash-oh/csi-cant-stand-it"
-                }],
-            "desc": "Can we quantitatively differentiate murderers and non-murderers in TV Show, Crime Scene Investigation, by analyzing their scripts? We utilized several Natural Language Processing techniques such as sentiment analysis, affective, bag of word models to classify characters into murderers and non-murderers using machine learning models."
-        },
-        {
-			"id":"ASL",
-            "title": "ASL Classification",
-            "authors": "Donghyuk Kim, Roger Wang, Jay Agrawal, Azim Keshwani, Matthew Kim",
+  "news": [
+    {
+      "title": "Graduated from Boston College",
+      "date": "May 13, 2020"
+    },
+    {
+      "title": "Started Spring 2020 Semester",
+      "date": "Jan 13, 2020"
+    },
+    {
+      "title": "Started working as Teaching Assistant for Computer Systems",
+      "date": "Jan 13, 2020"
+    }
+  ],
 
-            "source": "Machine Learning CSCI3345 Project, Fall 20192",
-            "teaser": "assets/ASL/ASL_image.png",
-            "tags":["machine-learning", "vision"],
-            "materials": [
-                { 
-                "label": "Paper",
-                "path": "assets/ASL/ASL_report.pdf"
-                },
-                { 
-                "label": "Code",
-                "path": "https://colab.research.google.com/drive/1eogkyXs47nXEySZM2X7rOsYbbT8wfIZc"
-                }],
-            "desc": "We utilized recurrent neural networks to build a model that can classify images of alphabets in American Sign Language."
-        },
+  "projects": [
+    {
+      "id": "swe",
+      "title": "Peer Assessment System",
+      "authors": "Donghyuk Kim, Richard Yang, Alex Xu, Seunghyun Nam",
+      "source": "Software Engineering CSCI3356 Course Project, Spring 2020",
+      "teaser": "assets/SWE/swe.png",
+      "tags": ["database", "web-app", "design"],
+      "materials": [
         {
-			"id":"reduction",
-            "title": "Proof of Hardness: Subset-Sum Problem",
-            "authors": "Donghyuk Kim",
-            "source": "Computability and Complexity CSCI3390 Project, Fall 2018",
-            "teaser": "assets/reduction/reduction_subset.png",
-            "tags":["theory", "algorithms"],
-            "materials": [
-                { 
-                "label": "Paper",
-                "path": "assets/reduction/kim_complexity.pdf"
-                },
-                { 
-                "label": "Github",
-                "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
-                }],
-            "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time."
+          "label": "Report",
+          "path": "assets/SWE/final_delivery.pdf"
         }
-	]
+      ],
+      "desc": "Full-stack peer evaluation software. Professors can create and manage peer evaluations for students to complete. Developed by four seniors, this semester-long project was designed to emulate real software engineering process. Tools utilized include Django, React, Django REST framework, etc. Please read the report for details on what functional requirements have been fulfilled. Credits for illustrations goes to 'Team Shrug'. The website is deployed on a private server."
+    },
+    {
+      "id": "Web",
+      "title": "Donation Hub - React Website",
+      "authors": "Donghyuk Kim, Max Bahar",
+      "source": "Web App Development CSCI2254 Final Project, Spring 2020",
+      "teaser": "assets/Web/donation.png",
+      "tags": ["web-app", "design"],
+      "materials": [
+        {
+          "label": "Website",
+          "path": "https://bcwebcourse.github.io/creative-project-project-donation/"
+        }
+      ],
+      "desc": "How can we make giving non-monetary donations to organizations more convenient, accessible, and personal for donors? Our blog-style website offers a centralized hub where donors can learn about various local organizations at once. The website was developed using React."
+    },
+    {
+      "id": "Database",
+      "title": "Order Tracking Application",
+      "authors": "Donghyuk Kim, Yindong Sun, Kevin Li, Rockey Ke",
+      "source": "Database Systems & Application CSCI2257 Final Project, Fall 2019",
+      "teaser": "assets/Database/database_app.png",
+      "tags": ["database", "web-app"],
+      "materials": [],
+      "desc": "Database-oriented web application built with Oracle Application Express. The app mimics functionalities typically found in online shopping carts such as adding items to cart, checking out, validating order, canceling order, viewing status, etc."
+    },
+    {
+      "id": "NLP",
+      "title": "Speech Analysis of Murderers in TV Show",
+      "authors": "Donghyuk Kim, Jessica Bolduc, Ashley Oh, Dipesh Patel",
+      "source": "Natural Language Processing CSCI3349 Final Project, Fall 2019",
+      "teaser": "assets/NLP/nlp_poster.png",
+      "tags": ["machine-learning", "nlp"],
+      "materials": [
+        {
+          "label": "Download-Poster",
+          "path": "assets/NLP/nlp_proj.pptx"
+        },
+        {
+          "label": "Github",
+          "path": "https://github.com/ash-oh/csi-cant-stand-it"
+        }
+      ],
+      "desc": "Can we quantitatively differentiate murderers and non-murderers in TV Show, Crime Scene Investigation, by analyzing their scripts? We utilized several Natural Language Processing techniques such as sentiment analysis, affective, bag of word models to classify characters into murderers and non-murderers using machine learning models."
+    },
+    {
+      "id": "ASL",
+      "title": "ASL Classification",
+      "authors": "Donghyuk Kim, Roger Wang, Jay Agrawal, Azim Keshwani, Matthew Kim",
+
+      "source": "Machine Learning CSCI3345 Final Project, Fall 2019",
+      "teaser": "assets/ASL/ASL_image.png",
+      "tags": ["machine-learning", "algorithms"],
+      "materials": [
+        {
+          "label": "Report",
+          "path": "assets/ASL/ASL_report.pdf"
+        },
+        {
+          "label": "Code",
+          "path": "https://colab.research.google.com/drive/1eogkyXs47nXEySZM2X7rOsYbbT8wfIZc"
+        }
+      ],
+      "desc": "We utilized recurrent neural networks to build a model that can classify images of alphabets in American Sign Language."
+    },
+    {
+      "id": "swift",
+      "title": "Evil Hangman Game",
+      "authors": "Donghyuk Kim",
+
+      "source": "Swift/iOS App Dev ISYS2160 Final Project, Spring 2019",
+      "teaser": "assets/Swift/evil.png",
+      "tags": ["design", "algorithms"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/Evil-Hangman-App"
+        }
+      ],
+      "desc": "iOS game developed with Swift using Xcode. It is Hangman, but with a catch: you can't win! It uses an algorithm to filter through remaining words and secretly changes the answer as user guesses letters. Easter egg to turn off 'evil' feature available."
+    },
+    {
+      "id": "reduction",
+      "title": "Proof of Hardness: Subset-Sum Problem",
+      "authors": "Donghyuk Kim",
+      "source": "Computability and Complexity CSCI3390 Final Project, Fall 2018",
+      "teaser": "assets/reduction/reduction_subset.png",
+      "tags": ["theory", "algorithms"],
+      "materials": [
+        {
+          "label": "Paper",
+          "path": "assets/reduction/kim_complexity.pdf"
+        },
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
+        }
+      ],
+      "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time."
+    }
+  ]
 }
-
-

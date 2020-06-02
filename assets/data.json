@@ -37,6 +37,10 @@
         {
           "label": "Report",
           "path": "assets/SWE/final_delivery.pdf"
+        },
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/peerassessment"
         }
       ],
       "desc": "Full-stack peer evaluation software. Developed by four seniors, this semester-long project was designed to emulate software engineering process. Tools utilized include Django, React, Django REST framework, etc. Professors can use this system to create and manage peer evaluations for their students to complete. Notable features include: automatic email reminders, downloadable statistics, etc. Please read the report for more details on what functional requirements have been fulfilled. Credits for illustrations goes to 'Team Shrug'. The website is deployed on a private server."

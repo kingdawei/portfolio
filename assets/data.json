@@ -61,6 +61,21 @@
       "desc": "How can we make giving non-monetary donations to organizations more convenient, accessible, and personal for donors? Our blog-style website offers a centralized hub where donors can learn about various local organizations at once. The website was developed using React."
     },
     {
+      "id": "Web2",
+      "title": "Instagram Clone - React Website",
+      "authors": "Donghyuk Kim",
+      "source": "Web App Development CSCI2254 Project, Spring 2020",
+      "teaser": "assets/Web/insta.png",
+      "tags": ["web-app", "design"],
+      "materials": [
+        {
+          "label": "Website",
+          "path": "https://bcwebcourse.github.io/social-media-kingdawei/"
+        }
+      ],
+      "desc": "Replicated design and functionalities of Instagram. Built from scratch using create-react-app."
+    },
+    {
       "id": "Database",
       "title": "Order Tracking Application",
       "authors": "Donghyuk Kim, Yindong Sun, Kevin Li, Rockey Ke",

@@ -3,7 +3,7 @@
     "name": "Donghyuk Kim (David)",
     "title": "Donghyuk Kim",
     "photo": "assets/profile.png",
-    "desc": "Hi, I am a recent graduate at Boston College with B.A in Computer Science.",
+    "desc": "Hi, I am a recent computer science graduate from Boston College.",
     "email": "davidk0716@gmail.com",
     "address": "321 Hammond Pond Parkway, Chestnut Hill, MA 02467",
     "linkedin": "https://www.linkedin.com/in/donghyukkim/",
@@ -26,16 +26,6 @@
   ],
 
   "projects": [
-    {
-      "id": "current",
-      "title": "Project Currently in Progress",
-      "authors": "Donghyuk Kim",
-      "source": "",
-      "teaser": "",
-      "tags": [""],
-      "materials": [],
-      "desc": "I am currently playing around with a simple HTML/CSS/JavaScript website that visualizes reduction (computability theory) e.g 3SAT -> Subset Sum."
-    },
     {
       "id": "swe",
       "title": "Peer Assessment System",
@@ -181,9 +171,13 @@
         {
           "label": "Github",
           "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
+        },
+        {
+          "label": "Website",
+          "path": "https://kingdawei.github.io/reduction-visualization/"
         }
       ],
-      "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time."
+      "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time. Github link is to a python program that performs reduction and solves subset sum. The website is a simple HTML/JavaScript visualization of the reduction."
     }
   ]
 }

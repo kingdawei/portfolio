@@ -27,6 +27,16 @@
 
   "projects": [
     {
+      "id": "current",
+      "title": "Project Currently in Progress",
+      "authors": "Donghyuk Kim",
+      "source": "",
+      "teaser": "",
+      "tags": [""],
+      "materials": [],
+      "desc": "I am currently playing around with a simple HTML/CSS/JavaScript website that visualizes reduction (computability theory) e.g 3SAT -> Subset Sum."
+    },
+    {
       "id": "swe",
       "title": "Peer Assessment System",
       "authors": "Donghyuk Kim, Richard Yang, Alex Xu, Seunghyun Nam",
@@ -64,7 +74,7 @@
       "id": "Web2",
       "title": "Instagram Clone - React Website",
       "authors": "Donghyuk Kim",
-      "source": "Web App Development CSCI2254 Project, Spring 2020",
+      "source": "Web App Development CSCI2254 Assignment, Spring 2020",
       "teaser": "assets/Web/insta.png",
       "tags": ["web-app", "design"],
       "materials": [
@@ -139,6 +149,22 @@
         }
       ],
       "desc": "iOS game developed with Swift using Xcode. It is Hangman, but with a catch: you can't win! It uses an algorithm to filter through remaining words and secretly changes the answer as user guesses letters. Easter egg to turn off 'evil' feature available."
+    },
+    {
+      "id": "swift2",
+      "title": "Snacktacular",
+      "authors": "Donghyuk Kim",
+
+      "source": "Swift/iOS App Dev ISYS2160 Assignment, Spring 2019",
+      "teaser": "assets/Swift/snack.png",
+      "tags": ["database"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/Snacktacular"
+        }
+      ],
+      "desc": "Final app development assignment from the course. Full-stack yelp-like restaurant review app using Cloud Firestore database, photo sharing, social login, maps, and more."
     },
     {
       "id": "reduction",

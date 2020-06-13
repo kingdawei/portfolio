@@ -27,12 +27,31 @@
 
   "projects": [
     {
+      "id": "heart",
+      "title": "Heart Disease Classifier",
+      "authors": "Donghyuk Kim",
+      "source": "Personal Project",
+      "teaser": "assets/Django/heart.png",
+      "tags": ["database", "django", "machine-learning"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/heart-diesease-predictor/tree/master"
+        },
+        {
+          "label": "Website",
+          "path": "http://kingdawei.pythonanywhere.com"
+        }
+      ],
+      "desc": "Django website that predicts presence of heart disease based on input. The model is a gaussian naive bayes classifier trained with heart disease dataset from UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/Heart+Disease"
+    },
+    {
       "id": "swe",
       "title": "Peer Assessment System",
       "authors": "Donghyuk Kim, Richard Yang, Alex Xu, Seunghyun Nam",
       "source": "Software Engineering CSCI3356 Course Project, Spring 2020",
       "teaser": "assets/SWE/swe.png",
-      "tags": ["database", "web-app", "design"],
+      "tags": ["database", "react", "django"],
       "materials": [
         {
           "label": "Report",
@@ -51,7 +70,7 @@
       "authors": "Donghyuk Kim, Max Bahar",
       "source": "Web App Development CSCI2254 Final Project, Spring 2020",
       "teaser": "assets/Web/donation.png",
-      "tags": ["web-app", "design"],
+      "tags": ["react"],
       "materials": [
         {
           "label": "Website",
@@ -66,7 +85,7 @@
       "authors": "Donghyuk Kim",
       "source": "Web App Development CSCI2254 Assignment, Spring 2020",
       "teaser": "assets/Web/insta.png",
-      "tags": ["web-app", "design"],
+      "tags": ["react"],
       "materials": [
         {
           "label": "Website",
@@ -81,7 +100,7 @@
       "authors": "Donghyuk Kim, Yindong Sun, Kevin Li, Rockey Ke",
       "source": "Database Systems & Application CSCI2257 Final Project, Fall 2019",
       "teaser": "assets/Database/database_app.png",
-      "tags": ["database", "web-app"],
+      "tags": ["database"],
       "materials": [],
       "desc": "Database-oriented web application built with Oracle Application Express. The app mimics functionalities typically found in online shopping carts such as adding items to cart, checking out, validating order, canceling order, viewing status, etc."
     },
@@ -91,7 +110,7 @@
       "authors": "Donghyuk Kim, Jessica Bolduc, Ashley Oh, Dipesh Patel",
       "source": "Natural Language Processing CSCI3349 Final Project, Fall 2019",
       "teaser": "assets/NLP/nlp_poster.png",
-      "tags": ["machine-learning", "nlp"],
+      "tags": ["machine-learning"],
       "materials": [
         {
           "label": "Download-Poster",
@@ -131,7 +150,7 @@
 
       "source": "Swift/iOS App Dev ISYS2160 Final Project, Spring 2019",
       "teaser": "assets/Swift/evil.png",
-      "tags": ["design", "algorithms"],
+      "tags": ["algorithms"],
       "materials": [
         {
           "label": "Github",

@@ -135,8 +135,8 @@ function renderProjects(projects) {
                 Theory
             </label>
             <label>
-                <input type="radio" name="filter" value="design">
-                Design
+                <input type="radio" name="filter" value="django">
+                Django
             </label>
             <label>
                 <input type="radio" name="filter" value="database">

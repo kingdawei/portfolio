@@ -27,10 +27,29 @@
 
   "projects": [
     {
+      "id": "sentiment",
+      "title": "Movie Review Sentiment Analysis",
+      "authors": "Donghyuk Kim",
+      "source": "",
+      "teaser": "assets/Django/sentiment.png",
+      "tags": ["database", "django", "machine-learning"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/review_sentiment"
+        },
+        {
+          "label": "Website",
+          "path": "http://reviewsentiment.pythonanywhere.com/"
+        }
+      ],
+      "desc": "Movie review sentiment analysis app on django. The model is trained with self-implemented Naive Bayes using data set of 2000 tagged movie reviews. See the about page of the website for more detail."
+    },
+    {
       "id": "heart",
       "title": "Heart Disease Classifier",
       "authors": "Donghyuk Kim",
-      "source": "Personal Project",
+      "source": "",
       "teaser": "assets/Django/heart.png",
       "tags": ["database", "django", "machine-learning"],
       "materials": [
@@ -43,7 +62,7 @@
           "path": "http://kingdawei.pythonanywhere.com"
         }
       ],
-      "desc": "Django website that predicts presence of heart disease based on input. The model is a gaussian naive bayes classifier trained with heart disease dataset from UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/Heart+Disease"
+      "desc": "Heart disease prediction app on django. The model is trained with sklearn's gaussian naive bayes classifier using heart disease dataset from UCI Machine Learning Repository: https://archive.ics.uci.edu/ml/datasets/Heart+Disease. Things to fix in the future: (1) Prevent clicking button with invalid input (2) table too wide (3) initial delay for data to load in modal page."
     },
     {
       "id": "swe",
@@ -60,9 +79,13 @@
         {
           "label": "Github",
           "path": "https://github.com/kingdawei/peerassessment"
+        },
+        {
+          "label": "Website",
+          "path": "http://peerassessment.pythonanywhere.com/login"
         }
       ],
-      "desc": "Full-stack peer evaluation software. Developed by four seniors, this semester-long project was designed to emulate software engineering process. Tools utilized include Django, React, Django REST framework, etc. Professors can use this system to create and manage peer evaluations for their students to complete. Notable features include: automatic email reminders, downloadable statistics, etc. Please read the report for more details on what functional requirements have been fulfilled. Credits for illustrations goes to 'Team Shrug'. The website is deployed on a private server."
+      "desc": "Full-stack peer assessment management system developed by a team of four seniors. This semester-long project was designed to emulate software engineering process. Professors can create and manage peer evaluations for their classes and students can complete assigned peer evaluations. Notable features include: automatic email reminders, downloadable statistics, etc. See the report for details on all functional requirements that have been fulfilled. [PROFESSOR LOGIN] id: ms@bc.edu | pw: SoftwareEngineering [STUDENT LOGIN] id: mp@bc.edu | pw:47047663 "
     },
     {
       "id": "Web",

@@ -155,10 +155,7 @@ function renderProjects(projects) {
                 <input type="radio" name="filter" value="algorithms">
                 Algorithms
             </label>
-            <label>
-                <input type="radio" name="filter" value="nlp">
-                NLP
-            </label>
+  
         </div>
         <div class="project-list">
             ${renderProjectItems(projects)}

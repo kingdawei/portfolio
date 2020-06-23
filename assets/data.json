@@ -27,6 +27,25 @@
 
   "projects": [
     {
+      "id": "lyrics",
+      "title": "Lyric Generation",
+      "authors": "Donghyuk Kim",
+      "source": "",
+      "teaser": "assets/Django/kendrick.png",
+      "tags": ["database", "django", "machine-learning"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/lyric_generator"
+        },
+        {
+          "label": "Website",
+          "path": "https://lyricgenerate.herokuapp.com/"
+        }
+      ],
+      "desc": "RNN text generation using lyrics of Kendrick Lamar songs."
+    },
+    {
       "id": "sentiment",
       "title": "Movie Review Sentiment Analysis",
       "authors": "Donghyuk Kim",

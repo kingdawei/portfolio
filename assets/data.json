@@ -202,22 +202,6 @@
       "desc": "iOS game developed with Swift using Xcode. It is Hangman, but with a catch: you can't win! It uses an algorithm to filter through remaining words and secretly changes the answer as user guesses letters. Easter egg to turn off 'evil' feature available."
     },
     {
-      "id": "swift2",
-      "title": "Snacktacular",
-      "authors": "Donghyuk Kim",
-
-      "source": "Swift/iOS App Dev ISYS2160 Assignment, Spring 2019",
-      "teaser": "assets/Swift/snack.png",
-      "tags": ["database"],
-      "materials": [
-        {
-          "label": "Github",
-          "path": "https://github.com/kingdawei/Snacktacular"
-        }
-      ],
-      "desc": "Final app development assignment from the course. Full-stack yelp-like restaurant review app using Cloud Firestore database, photo sharing, social login, maps, and more."
-    },
-    {
       "id": "reduction",
       "title": "Proof of Hardness: Subset-Sum Problem",
       "authors": "Donghyuk Kim",

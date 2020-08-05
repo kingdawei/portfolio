@@ -60,8 +60,7 @@ function renderAbout(about) {
                     <strong>${about.title}</strong><br>
                     ${about.email} <br>
                     ${about.address}<br>
-                    <a href="${about.linkedin}" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a>
-                    | <a href="${about.github}" target="_blank"><i class="fab fa-github"></i> Github </a><br>
+                    <a href="${about.github}" target="_blank"><i class="fab fa-github"></i> Github </a><br>
                 </p>
             </div>
             <div class="col-6">
@@ -142,11 +141,7 @@ function renderProjects(projects) {
                 <input type="radio" name="filter" value="database">
                 Database
             </label>
-            <label>
-            <input type="radio" name="filter" value="web-app">
-                Web-App
-            </label>
-            
+            <label>            
             <label>
                 <input type="radio" name="filter" value="machine-learning">
                 Machine Learning

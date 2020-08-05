@@ -1,6 +1,6 @@
 let data;
 
-let photos = ["profile.png"]; //
+let photos = ["profile.png"];
 
 fetch("assets/data.json")
   .then((resp) => resp.json())
@@ -55,12 +55,14 @@ function renderAbout(about) {
         <h1 class="title">${about.name}</h1>
         <div class="row">
             <div class="col-6">
-             
+                <img class="profile-img" src="assets/${_.sample(photos)}"/>
                 <p>
                     <strong>${about.title}</strong><br>
                     ${about.email} <br>
                     ${about.address}<br>
-                    <a href="${about.github}" target="_blank"><i class="fab fa-github"></i> Github </a><br>
+                    <a href="${
+                      about.github
+                    }" target="_blank"><i class="fab fa-github"></i> Github </a><br>
                 </p>
             </div>
             <div class="col-6">

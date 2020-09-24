@@ -1,6 +1,8 @@
 let data;
 
 let photos = ["profile.png"];
+let photos2 = ["cg.jpg"];
+let photos3 = ["fam.png"];
 
 fetch("assets/data.json")
   .then((resp) => resp.json())
@@ -56,22 +58,32 @@ function renderAbout(about) {
         <div class="row">
             <div class="col-6">
                 <img class="profile-img" src="assets/${_.sample(photos)}"/>
-                <p>
-                    <strong>${about.title}</strong><br>
+                
+            </div>
+            <div class="col-6">
+            <p>
                     ${about.email} <br>
                     ${about.address}<br>
                     <a href="${
                       about.github
                     }" target="_blank"><i class="fab fa-github"></i> Github </a><br>
-                </p>
+                    <br><br><br>
+                    ${about.desc}
+            </p>
+         
+             
+            </div>
+        </div >   
+        <br><br>         
+        <div class="row">
+            <div class="col-6">
+                <img class="profile-img" src="assets/${_.sample(photos2)}"/>
             </div>
             <div class="col-6">
-                <p>
-                ${about.desc}
-                </p>
+                <img class="profile-img" src="assets/${_.sample(photos3)}"/>
             </div>
-            
-        </div >    
+        </div >  
+        <br>
     </section>`;
 }
 
@@ -103,6 +115,7 @@ function renderNews(news) {
             ${renderNewsItems(news)}
         </div>
     </section>
+    <br>
     `;
 }
 function renderNewsItems(news) {

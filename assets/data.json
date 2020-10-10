@@ -198,10 +198,6 @@
         {
           "label": "Github",
           "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
-        },
-        {
-          "label": "Website",
-          "path": "https://kingdawei.github.io/reduction-visualization/"
         }
       ],
       "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time. Github link is to a python program that performs reduction and solves subset sum. The website is a simple HTML/JavaScript visualization of the reduction."

@@ -1,8 +1,6 @@
 let data;
 
 let photos = ["profile.png"];
-let photos2 = ["cg.jpg"];
-let photos3 = ["fam.png"];
 
 fetch("assets/data.json")
   .then((resp) => resp.json())
@@ -26,7 +24,7 @@ function renderNavbar(page, items) {
            ${
              page === "project"
                ? `<li>
-                    <a href=".">Go Back</a>
+                    <a href=".">Back</a>
                 </li>`
                : items
                    .map(
@@ -51,6 +49,7 @@ function renderMainPage(data) {
     `;
   addInteractions();
 }
+
 function renderAbout(about) {
   return `
     <section id="about">
@@ -58,31 +57,22 @@ function renderAbout(about) {
         <div class="row">
             <div class="col-6">
                 <img class="profile-img" src="assets/${_.sample(photos)}"/>
-                
+
             </div>
             <div class="col-6">
             <p>
-                    ${about.email} <br>
-                    ${about.address}<br>
-                    <a href="${
-                      about.github
-                    }" target="_blank"><i class="fab fa-github"></i> Github </a><br>
-                    <br><br><br>
                     ${about.desc}
+                    <a href="${
+                      about.homesite
+                    }" target="_blank"><i class="fas fa-home"></i> Main Page </a><br>
+                    <br><br><br>
+
             </p>
-         
-             
+
             </div>
-        </div >   
-        <br><br>         
-        <div class="row">
-            <div class="col-6">
-                <img class="profile-img" src="assets/${_.sample(photos2)}"/>
-            </div>
-            <div class="col-6">
-                <img class="profile-img" src="assets/${_.sample(photos3)}"/>
-            </div>
-        </div >  
+        </div >
+        <br><br>
+        
         <br>
     </section>`;
 }
@@ -139,7 +129,7 @@ function renderNewsItems(news) {
 function renderProjects(projects) {
   return `
     <section id="projects">
-        <h1 class="title">Projects</h1>
+        <h1 class="title">Sample Projects</h1>
         <div class="filter">
             <input type="radio" name="filter" value="all">
                 All
@@ -260,13 +250,16 @@ function renderProjectItems(projects) {
                     
                 </div>
             </div> 
-            <div class="col-6">
-                <img src="${d.teaser}" width="100%">
-            </div>
         </div>
     `
     )
     .join("");
+}
+
+{
+  /* <div class="col-6">
+<img src="${d.teaser}" width="100%">
+</div> */
 }
 
 function addInteractions() {

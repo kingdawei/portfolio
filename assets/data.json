@@ -3,12 +3,11 @@
     "name": "Donghyuk Kim (David)",
     "title": "Donghyuk Kim",
     "photo": "assets/profile.png",
-    "photo2": "assets/cg.jpg",
-    "desc": "Hi, I am a recent computer science graduate from Boston College.",
+    "desc": "",
     "email": "davidk0716@gmail.com",
     "address": "321 Hammond Pond Parkway, Chestnut Hill, MA 02467",
     "linkedin": "https://www.linkedin.com/in/donghyukkim/",
-    "github": "https://github.com/kingdawei"
+    "homesite": "https://kingdawei.github.io/personal_website/index.html"
   },
 
   "news": [
@@ -27,6 +26,21 @@
   ],
 
   "projects": [
+    {
+      "id": "viterbi",
+      "title": "POS Tagging HMM Viterbi",
+      "authors": "Donghyuk Kim",
+      "source": "",
+      "teaser": "assets/NLP/viterbi.png",
+      "tags": ["algorithms"],
+      "materials": [
+        {
+          "label": "Github",
+          "path": "https://github.com/kingdawei/hmm_pos"
+        }
+      ],
+      "desc": "Implementation of Part-of-Speech tagging with Hidden Markov Model using viterbi algorithm."
+    },
     {
       "id": "lyrics",
       "title": "Lyric Generation",
@@ -119,16 +133,6 @@
       "desc": "Replicated design and functionalities of Instagram. Built from scratch using create-react-app."
     },
     {
-      "id": "Database",
-      "title": "Order Tracking Application",
-      "authors": "Donghyuk Kim, Yindong Sun, Kevin Li, Rockey Ke",
-      "source": "Database Systems & Application CSCI2257 Final Project, Fall 2019",
-      "teaser": "assets/Database/database_app.png",
-      "tags": ["database"],
-      "materials": [],
-      "desc": "Database-oriented web application built with Oracle Application Express. The app mimics functionalities typically found in online shopping carts such as adding items to cart, checking out, validating order, canceling order, viewing status, etc."
-    },
-    {
       "id": "NLP",
       "title": "Speech Analysis of Murderers in TV Show",
       "authors": "Donghyuk Kim, Jessica Bolduc, Ashley Oh, Dipesh Patel",
@@ -168,22 +172,6 @@
       "desc": "We utilized recurrent neural networks to build a model that can classify images of alphabets in American Sign Language."
     },
     {
-      "id": "swift",
-      "title": "Evil Hangman Game",
-      "authors": "Donghyuk Kim",
-
-      "source": "Swift/iOS App Dev ISYS2160 Final Project, Spring 2019",
-      "teaser": "assets/Swift/evil.png",
-      "tags": ["algorithms"],
-      "materials": [
-        {
-          "label": "Github",
-          "path": "https://github.com/kingdawei/Evil-Hangman-App"
-        }
-      ],
-      "desc": "iOS game developed with Swift using Xcode. It is Hangman, but with a catch: you can't win! It uses an algorithm to filter through remaining words and secretly changes the answer as user guesses letters. Easter egg to turn off 'evil' feature available."
-    },
-    {
       "id": "reduction",
       "title": "Proof of Hardness: Subset-Sum Problem",
       "authors": "Donghyuk Kim",
@@ -200,7 +188,7 @@
           "path": "https://github.com/kingdawei/3sat-to-subset-reduction"
         }
       ],
-      "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time. Github link is to a python program that performs reduction and solves subset sum. The website is a simple HTML/JavaScript visualization of the reduction."
+      "desc": "The paper steps through the proof that the classic subset-sum problem is an NP-COMPLETE problem. Meaning, if there exists an algorithm that can solve subset-sum in polynomial time, P would equal NP. The program in github reduces 3-SAT problem into SUBSET-SUM problem in polynomial time. Github link is to a python program that performs reduction and solves subset sum."
     }
   ]
 }
